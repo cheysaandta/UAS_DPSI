@@ -1,5 +1,5 @@
 const express = require('express');
-const { getServiceRequests, processServiceRequest, createServiceRequest } = require('../controllers/servicescontroller');
+const { getServiceRequests, processServiceRequest, createServiceRequest } = require('../controllers/servicecontroller');
 const authenticateJWT = require('../middlewares/authmiddleware');
 
 const router = express.Router();
