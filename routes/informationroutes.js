@@ -1,6 +1,6 @@
 const express = require('express');
-const { getInformation, addInformation, updateInformation, deleteInformation } = require('../controllers/informationController');
-const authenticateJWT = require('../middlewares/authMiddleware');
+const { getInformation, addInformation, updateInformation, deleteInformation } = require('../controllers/informationcontroller');
+const authenticateJWT = require('../middlewares/authmiddleware');
 
 const router = express.Router();
 

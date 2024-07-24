@@ -1,6 +1,6 @@
 const express = require('express');
-const { getServiceRequests, processServiceRequest } = require('../controllers/serviceController');
-const authenticateJWT = require('../middlewares/authMiddleware');
+const { getServiceRequests, processServiceRequest } = require('../controllers/servicecontroller');
+const authenticateJWT = require('../middlewares/authmiddleware');
 
 const router = express.Router();
 

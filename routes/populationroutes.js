@@ -1,6 +1,6 @@
 const express = require('express');
-const { getPopulationData, addPopulationData, updatePopulationData, deletePopulationData } = require('../controllers/populationController');
-const authenticateJWT = require('../middlewares/authMiddleware');
+const { getPopulationData, addPopulationData, updatePopulationData, deletePopulationData } = require('../controllers/populationcontroller');
+const authenticateJWT = require('../middlewares/authmiddleware');
 
 const router = express.Router();
 

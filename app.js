@@ -1,9 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const authRoutes = require('./routes/authRoutes');
-const populationRoutes = require('./routes/populationRoutes');
-const serviceRoutes = require('./routes/serviceRoutes');
-const informationRoutes = require('./routes/informationRoutes');
+const authRoutes = require('./routes/authroutes');
+const populationRoutes = require('./routes/populationroutes');
+const serviceRoutes = require('./routes/serviceroutes');
+const informationRoutes = require('./routes/informationroutes');
 
 dotenv.config();
 
