@@ -1,16 +1,23 @@
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = process.env;
+const dotenv = require('dotenv');
+
+dotenv.config();
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const authenticateJWT = (req, res, next) => {
-  const token = req.headers.authorization;
+  const authHeader = req.headers.authorization;
 
-  if (!token) {
-    return res.sendStatus(403);
+  if (!authHeader) {
+    console.log('Authorization header is missing');
+    return res.status(403).json({ message: 'Authorization header is missing' });
   }
+
+  const token = authHeader.split(' ')[1];
 
   jwt.verify(token, JWT_SECRET, (err, user) => {
     if (err) {
-      return res.sendStatus(403);
+      console.log('Invalid token');
+      return res.status(403).json({ message: 'Invalid token' });
     }
 
     req.user = user;
@@ -19,3 +26,5 @@ const authenticateJWT = (req, res, next) => {
 };
 
 module.exports = authenticateJWT;
+
+

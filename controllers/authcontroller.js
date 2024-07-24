@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { db } = require('../firebase');
-const { JWT_SECRET } = process.env;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const register = async (req, res) => {
   const { email, password, role } = req.body;
